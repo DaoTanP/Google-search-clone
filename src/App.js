@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Search from "./components/Search";
 import SearchPage from "./pages/SearchPage";
 
 function App() {
@@ -23,6 +22,3 @@ function App() {
 }
 
 export default App;
-
-// https://developers.google.com/custom-search/v1/using_rest
-// https://cse.google.com/cse/create/new

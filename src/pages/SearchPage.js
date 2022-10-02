@@ -1,8 +1,7 @@
 import React from "react";
 import "./SearchPage.css";
-import useGoogleSearch from "../useGoogleSearch";
+import useSearch from "../useSearch";
 import { useStateValue } from "../StateProvider";
-import Response from "../response";
 import { Link } from "react-router-dom";
 import Search from "../components/Search";
 import SearchIcon from "@material-ui/icons/Search";
@@ -17,12 +16,11 @@ function SearchPage() {
   const [{ term }, dispatch] = useStateValue();
 
   // LIVE API CALL
-  const { data } = useGoogleSearch(term);
+  const { data } = useSearch(term);
 
   // MOCK API CALL
   //   const data = Response;
 
-  console.log(data);
   return (
     <div className="searchPage">
       <div className="searchPage__header">
@@ -78,27 +76,27 @@ function SearchPage() {
       {term && (
         <div className="searchPage__results">
           <p className="searchPage__resultCount">
-            About {data?.searchInformation.formattedTotalResults} results (
-            {data?.searchInformation.formattedSearchTime} seconds) for {term}
+            About {data?.length} results (
+            {(data?.time / 1000) || 0} seconds) for {term}
           </p>
 
-          {data?.items.map((item) => (
-            <div className="searchPage__result">
-              <a href={item.link}>
-                {item.pagemap?.cse_image?.length > 0 &&
+          {data?.map((item) => (
+            <div key={item.id} className="searchPage__result">
+              <a className="searchPage__resultBreadcrumb txt-wrapped" href={item.url}>
+                {/* {item.pagemap?.cse_image?.length > 0 &&
                   item.pagemap?.cse_image[0]?.src && (
                     <img
                       className="searchPage__resultImage"
                       src={item.pagemap?.cse_image[0]?.src}
                       alt=""
                     />
-                  )}
-                {item.displayLink}
+                  )} */}
+                {item.url.replace(/[\/]/g, ' > ')}
               </a>
-              <a className="searchPage__resultTitle" href={item.link}>
+              <a className="searchPage__resultTitle" href={item.url}>
                 <h2>{item.title}</h2>
               </a>
-              <p className="searchPage__resultSnippet">{item.snippet}</p>
+              <p className="searchPage__resultSnippet txt-wrapped max-line-2">{item.content}</p>
             </div>
           ))}
         </div>
