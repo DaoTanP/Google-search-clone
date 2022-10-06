@@ -1,5 +1,13 @@
+:root {
+  --center-abs-margin: 180px;
+  --center-width: 652px;
+  --rhs-margin: 60px;
+  --rhs-width: 369px;
+}
+
 * {
   margin: 0;
+  font-size: 16px;
 }
 
 body {
