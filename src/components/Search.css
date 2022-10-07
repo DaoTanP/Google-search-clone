@@ -12,6 +12,10 @@
   max-width: var(--center-width);
 }
 
+.search__input:hover, .search__input:focus {
+  box-shadow: 0 2px 8px 1px rgb(64 60 67 / 24%);
+}
+
 .search__input>input {
   flex: 1;
   border: none;

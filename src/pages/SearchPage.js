@@ -37,9 +37,8 @@ function SearchPage() {
   return (
     <div className="searchPage">
       <div className="searchPage__header">
-        <Link to="/">
+        <Link to="/" className="searchPage__logo">
           <img
-            className="searchPage__logo"
             src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
             alt=""
           />
@@ -158,7 +157,7 @@ function ResultPagination({ data }) {
       {_DATA.currentData().map(item => {
         return (
           <div key={item.id} className="searchPage__result">
-            <a className="searchPage__resultBreadcrumb txt-wrapped" href={'https://' + item.url}>
+            <a className="searchPage__resultBreadcrumb txt-wrapped" href={'https://' + item.url} target='_blank'>
               {/* {item.pagemap?.cse_image?.length > 0 &&
                       item.pagemap?.cse_image[0]?.src && (
                         <img
@@ -169,7 +168,7 @@ function ResultPagination({ data }) {
                       )} */}
               {'https://' + item.url.replace(/[\/]/g, ' > ')}
             </a>
-            <a className="searchPage__resultTitle txt-wrapped" href={'https://' + item.url}>
+            <a className="searchPage__resultTitle txt-wrapped" href={'https://' + item.url} target='_blank'>
               {item.title}
             </a>
             <p className="searchPage__resultSnippet txt-wrapped max-line-2">{item.content}</p>
@@ -177,14 +176,16 @@ function ResultPagination({ data }) {
         )
       })}
 
-      <Pagination
-        count={count}
-        page={page}
-        // size="large"
-        // variant="outlined"
-        // shape="rounded"
-        onChange={handleChange}
-      />
+      <div style={{ display: 'grid', placeItems: 'center' }}>
+        <Pagination
+          count={count}
+          page={page}
+          // size="large"
+          // variant="outlined"
+          // shape="rounded"
+          onChange={handleChange}
+        />
+      </div>
     </div>
   )
 }

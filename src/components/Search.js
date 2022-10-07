@@ -17,12 +17,12 @@ function Search({ hideButtons = false }) {
 
     // console.log("button clicked", input);
 
-    if (input === '')
+    if (input.trim() === '')
       return;
 
     dispatch({
       type: actionTypes.SET_SEARCH_TERM,
-      term: input,
+      term: input.trim(),
     });
 
     history.push("/search");
@@ -32,7 +32,7 @@ function Search({ hideButtons = false }) {
     <form className="search">
       <div className="search__input">
         <SearchIcon className="search__inputIcon" />
-        <input value={input} onChange={(e) => setInput(e.target.value.trim())} />
+        <input value={input} onChange={(e) => setInput(e.target.value)} />
         <MicIcon />
       </div>
       {!hideButtons ? (
