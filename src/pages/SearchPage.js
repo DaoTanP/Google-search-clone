@@ -155,6 +155,7 @@ function ResultPagination({ data }) {
   return (
     <div>
       {_DATA.currentData().map(item => {
+        item.url = item.url.replace('https://', '')
         return (
           <div key={item.id} className="searchPage__result">
             <a className="searchPage__resultBreadcrumb txt-wrapped" href={'https://' + item.url} target='_blank'>
