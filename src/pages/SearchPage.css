@@ -10,6 +10,16 @@
   box-shadow: 0 2px 5px 1px rgba(64, 60, 67, .16);
 }
 
+.logo {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg height='42' width='41' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%23152949' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'%3E%3Cpath d='M18 14.953l-.286-9.147s2.739-2.187 8.357-2.005'/%3E%3Cpath d='M17.056 17.744L12.143 6.076S14.029 2.939 19.57 1M14 18.674l-7.243.837s-2.76 4.708.409 13.117'/%3E%3Cpath d='M14.929 16.922L5.17 14.023S1.085 17.631 1 27.047M26.071 22.395l9.133-1.124s1.776-3.223.777-9.108'/%3E%3Cpath d='M24.214 23.689l11.988 3.358S38.95 24.654 40 18.674M23.06 27.047l.226 7.23s-4.243 3.391-13 1.496'/%3E%3Cpath d='M25.513 25.186l4.273 9.617S26.876 39.535 17.714 41'/%3E%3C/g%3E%3Cpath d='M24.855 29.566a8.81 8.81 0 01-12.442.913c-3.687-3.19-4.095-8.77-.911-12.464a8.812 8.812 0 0112.443-.912c3.686 3.189 4.094 8.77.91 12.463' fill='%234f5f8f'/%3E%3Cpath d='M30.097 19.28c-2.228 2.57-6.044 2.924-8.524.79-2.479-2.132-2.683-5.944-.457-8.514 2.228-2.569 6.045-2.923 8.524-.79 2.48 2.134 2.685 5.946.457 8.514' fill='%23f28c15'/%3E%3C/g%3E%3C/svg%3E");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 .searchPage__header .search {
   width: var(--center-width);
 }
