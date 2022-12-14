@@ -7,8 +7,8 @@ function useSearch(term) {
     const fetchData = async () => {
       const startTime = new Date();
       fetch(
-        // `https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${CONTEXT_KEY}&q=${term}`
-        `https://web-crawler.dao-tan-phattan.repl.co/webs?term=${term}`,
+        // `https://web-crawler.dao-tan-phattan.repl.co/webs?term=${term}`,
+        `https://cheerio-web-crawler.dao-tan-phattan.repl.co/search?term=${term}`,
         {
           mode: 'cors',
           headers: {
@@ -18,8 +18,6 @@ function useSearch(term) {
       )
         .then((response) => response.json())
         .then((result) => {
-          // console.log('fetch result: ' + result);
-
           const responseTime = new Date() - startTime;
           result.time = responseTime;
 
