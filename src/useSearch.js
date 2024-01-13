@@ -7,8 +7,7 @@ function useSearch(term) {
     const fetchData = async () => {
       const startTime = new Date();
       fetch(
-        // `https://web-crawler.dao-tan-phattan.repl.co/webs?term=${term}`,
-        `https://cheerio-web-crawler.dao-tan-phattan.repl.co/search?term=${term}`,
+        `https://580abac2-41a0-4dd9-acef-6d5e4fb93a89-00-2sx0zh4c3bt1s.global.replit.dev/search?term=${term}`,
         {
           mode: 'cors',
           headers: {
