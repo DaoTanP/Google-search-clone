@@ -2,23 +2,7 @@
 
 <p>&nbsp;</p> 
 
-<p align="center">A  <strong>Google Search Engine Clone</strong> that is built using the React js and google search api.</p>
-
-<p>&nbsp;</p> 
-
-
-![img1](demo/img1.png)
-
-<p>&nbsp;</p> 
-
-![img2](demo/img2.png)
-
-<p>&nbsp;</p> 
-<p>&nbsp;</p> 
-
-####  Deployed on firebase:
-
-LIve Link: https://search-engine-cb6e7.web.app/
+<p align="center">A  <strong>Google Search Engine Clone</strong> that is built using the React js.</p>
 
 <p>&nbsp;</p> 
 
@@ -27,9 +11,9 @@ LIve Link: https://search-engine-cb6e7.web.app/
 ```
 
 
-$ git clone https://github.com/Maheshoo7/Google-search-clone.git
+$ git clone https://github.com/DaoTanP/Google-search-clone.git
 
-$ cd google-search-clone/
+$ cd google-search-clone
 
 $ npm install
 
