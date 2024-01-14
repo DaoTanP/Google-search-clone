@@ -38,7 +38,7 @@ function Search({ hideButtons = false }) {
       {!hideButtons ? (
         <div className="search__buttons">
           <Button onClick={search} type="submit" variant="outlined">
-            Search on Wikipedia
+            Search
           </Button>
         </div>
       ) : (
